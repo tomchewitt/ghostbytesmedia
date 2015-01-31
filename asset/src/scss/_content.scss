@@ -1,0 +1,36 @@
+$headerheight: 150px;
+
+html,body{
+	width:100%;
+	height:100%;
+}
+
+.header{
+	position:relative;
+	width:100%;
+	height:$headerheight;
+	background-color:grey;
+	.logo-type{
+		height:$headerheight;
+		width:$headerheight;
+		background-color:red;
+	}
+	.logo{
+		height:$headerheight;
+		width:$headerheight;
+		background-color:green;
+	}
+}
+
+header{
+	float:right;
+	width:87%;
+	height:100%;
+	position:absolute;
+	right:0;
+	background-color:blue;
+}
+
+.hero{
+	height:100%;
+}
