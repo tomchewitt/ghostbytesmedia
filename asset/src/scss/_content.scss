@@ -6,31 +6,149 @@ html,body{
 }
 
 .header{
-	position:relative;
+	position:fixed;
+	left:0;
+	top:0;
 	width:100%;
 	height:$headerheight;
 	background-color:grey;
+	z-index:10;
 	.logo-type{
+		position:absolute;
+		left:0;
+		top:$headerheight;
 		height:$headerheight;
 		width:$headerheight;
 		background-color:red;
 	}
 	.logo{
+		float:left;
 		height:$headerheight;
 		width:$headerheight;
 		background-color:green;
 	}
+	.social{
+		float:right;
+		margin-top:50px;
+		height:50px;
+	}
+	.social li{
+		display:inline-block;
+		float:right;
+		height:50px;
+		width:50px;
+	}
+	.email{
+		background-color:purple;
+	}
+	.linkedin{
+		background-color:pink;
+	}
+	.skype{
+		background-color:orange;
+	}
 }
 
 header{
-	float:right;
 	width:87%;
 	height:100%;
 	position:absolute;
 	right:0;
+	top:0;
 	background-color:blue;
 }
 
 .hero{
 	height:100%;
+	overflow:hidden;
+	position:relative;
+	h2{
+		margin-top:50%;
+		margin-left:13%;
+	}
+	.pointer{
+		width:$headerheight;
+		height:$headerheight;
+		position:absolute;
+		left:50%;
+		transform:translate(-50%,0);
+		bottom:-100px;
+		z-index:4;
+		&::before{
+			width:$headerheight;
+			height:$headerheight;
+			position:absolute;
+			top:0;
+			left:0;
+			content:"";
+			transform:rotate(45deg);
+			background-color:red;
+			transition:all 0.3s ease;
+		}
+		&:hover{
+			&::before{
+				transform:rotate(0deg);
+			}
+		}
+		.arrow{
+			width:$headerheight;
+			height:$headerheight;
+			position:relative;
+			z-index:5;
+			&::after{
+				width:3px;
+				height:20px;
+				content:"";
+				display:block;
+				position:absolute;
+				top:5px;
+				left:50%;
+				transform:translate(-100%,0);
+				transform:rotate(-45deg);
+				transform-origin:bottom left;
+				background-color:black;
+			}
+			&::before{
+				width:3px;
+				height:20px;
+				content:"";
+				display:block;
+				position:absolute;
+				top:5px;
+				left:49%;
+				transform:rotate(45deg);
+				transform-origin:bottom right;
+				background-color:black;
+			}
+		}
+		
+	}
+	
+}
+
+.projects{
+	height:700px;
+	position:relative;
+	z-index:5;
+	div{
+		width:50%;
+		height:100%;
+		display:inline-block;
+		float:left;
+	}
+	.les-dreamers{
+			background-color:blue;
+		}
+	.little-big-foot{
+			background-color:green;
+	}
+}
+
+.footer{
+	height:$headerheight;
+	background-color:yellow;
+	line-height:$headerheight;
+	p{
+		margin-left:13%;
+	}
 }
