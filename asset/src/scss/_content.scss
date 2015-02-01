@@ -9,6 +9,7 @@ $lightblue: #5E8E95;
 $lighestblue: #6CC1D7;
 
 
+
 //###############################################
 // GLOBALS
 //###############################################
@@ -36,7 +37,6 @@ h2 {
 	top:0;
 	width:100%;
 	height:$headerheight;
-	background-color:grey;
 	z-index:10;
 	.logo-type{
 		position:absolute;
@@ -44,13 +44,27 @@ h2 {
 		top:$headerheight;
 		height:$headerheight;
 		width:$headerheight;
-		background-color:red;
+		background-color:$midblue;
+		img{
+			$logotypewidth:60%;
+			width:$logotypewidth;
+			height:$logotypewidth;
+			margin-top:(100-$logotypewidth)/2;
+			margin-left:(100-$logotypewidth)/2;
+		}
 	}
 	.logo{
 		float:left;
 		height:$headerheight;
 		width:$headerheight;
-		background-color:green;
+		background-color:$lightblue;
+		img{
+			$logowidth:70%;
+			width:$logowidth;
+			height:$logowidth;
+			margin-left:(100-$logowidth)/2;
+			margin-top:(100-$logowidth)/2;
+		}
 	}
 	.social{
 		float:right;
@@ -80,7 +94,7 @@ header{
 	position:absolute;
 	right:0;
 	top:0;
-	background-color:blue;
+	background-color:$darkblue;
 }
 
 
@@ -115,11 +129,6 @@ header{
 			transform:rotate(45deg);
 			background-color:red;
 			transition:all 0.3s ease;
-		}
-		&:hover{
-			&::before{
-				transform:rotate(0deg);
-			}
 		}
 		.arrow{
 			width:$headerheight;
@@ -174,18 +183,24 @@ header{
 				transition:all 0.3s ease;
 			}
 			&:hover{
-				&::after{
-					transform:rotate(0deg);
-				}
-				&::before{
-					transform:rotate(0deg);
-				}
-				.featured{
-					opacity:1;
-				}
-				.projects{
-					opacity:1;
-				}
+				
+			}
+		}
+		&:hover{
+			&::before{
+				transform:rotate(0deg);
+			}
+			.arrow::after{
+				transform:rotate(0deg);
+			}
+			.arrow::before{
+				transform:rotate(0deg);
+			}
+			.featured{
+				opacity:1;
+			}
+			.projects{
+				opacity:1;
 			}
 		}
 	}
