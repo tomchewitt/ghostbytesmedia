@@ -80,6 +80,7 @@ h2 {
 		margin-right:30px;
 		svg{
 			fill:$lightblue;
+			cursor:pointer;
 		}
 	}
 	.email{
@@ -115,7 +116,7 @@ h2 {
 }
 
 header{
-	width:87%;
+	width:100%;
 	height:100%;
 	position:absolute;
 	right:0;
@@ -130,6 +131,7 @@ header{
 
 .hero{
 	height:100%;
+	text-align:center;
 	overflow:hidden;
 	position:relative;
 	background: 
@@ -137,8 +139,8 @@ header{
 		repeating-linear-gradient( 45deg, transparent, transparent 10px, $lighestblue 10px, $lightblue 20px ),
 		linear-gradient( to bottom, $lighestblue, $lightblue );
 	h2{
+		margin:0 auto;
 		margin-top:350px;
-		margin-left:13%;
 		max-width: 60%;
 	}
 	.pointer{
@@ -245,12 +247,13 @@ header{
 .projects{
 	height:700px;
 	position:relative;
-	z-index:5;
+	z-index:11;
 	div{
 		width:50%;
 		height:100%;
 		display:inline-block;
 		float:left;
+		cursor:pointer;
 	}
 	.les-dreamers{
 			background-color:blue;
@@ -267,7 +270,7 @@ header{
 
 .footer{
 	height:$headerheight;
-	background-color:yellow;
+	background-color:$darkblue;
 	line-height:$headerheight;
 	p{
 		margin-left:13%;
