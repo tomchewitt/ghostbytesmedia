@@ -76,15 +76,41 @@ h2 {
 		float:right;
 		height:50px;
 		width:50px;
+		position:relative;
+		margin-right:30px;
+		svg{
+			fill:$lightblue;
+		}
 	}
 	.email{
-		background-color:purple;
+		svg{
+			width:80%;
+			height:80%;
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+		}
 	}
 	.linkedin{
-		background-color:pink;
+		svg{
+			width:70%;
+			height:70%;
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+		}
 	}
 	.skype{
-		background-color:orange;
+		svg{
+			width:80%;
+			height:80%;
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+		}
 	}
 }
 
