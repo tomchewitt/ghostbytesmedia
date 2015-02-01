@@ -254,12 +254,22 @@ header{
 		display:inline-block;
 		float:left;
 		cursor:pointer;
+		overflow:hidden;
+		position:relative;
 	}
 	.les-dreamers{
 			background-color:blue;
 		}
 	.little-big-foot{
 			background-color:green;
+	}
+	.background-image{
+		width:110%;
+		height:110%;
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
 	}
 }
 
