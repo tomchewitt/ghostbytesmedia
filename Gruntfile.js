@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 					'asset/src/js/jquery.js',
 					'asset/src/js/main.js'
 					],
-				dest: 'asset/src/js/bundle.js'
+				dest: 'asset/dist/js/bundle.js'
 			}
 		},
 
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 			    }
 			},
 			my_target: {
-				src: ['asset/src/js/bundle.js'],
+				src: ['asset/dist/js/bundle.js'],
 				dest: 'asset/dist/js/bundle.min.js'
 			}
 		},

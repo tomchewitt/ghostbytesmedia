@@ -13,4 +13,10 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	var pageHeight = $(window).height();
+	var headerHeight = $('.header').height();
+	var footerHeight = $('.footer').height();
+	var projectsHeight = pageHeight - (headerHeight + footerHeight);
+	$('.projects').css('height',projectsHeight);
 });
