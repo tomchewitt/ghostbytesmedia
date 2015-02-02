@@ -114,9 +114,6 @@ span {
 		margin:0 auto;
 		margin-top:370px;
 		max-width: 60%;
-		color: white;
-		// margin-right: 30px;
-		text-align: center;
 	}
 	.pointer{
 		width:200px;
@@ -234,13 +231,31 @@ span {
 	}
 	.les-dreamers{
 			background-color:blue;
+			.logo-image{
+				max-height:80%;
+				max-width:80%;
+				z-index:12;
+				position:absolute;
+				left:0;
+				top:50%;
+				transform:translate(0,-50%);
+			}
 		}
 	.little-big-foot{
 			background-color:green;
+			.logo-image{
+				max-height:60%;
+				max-width:60%;
+				z-index:12;
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%,-50%);
+			}
 	}
 	.background-image{
-		width:110%;
-		height:110%;
+		min-width:110%;
+		min-height:110%;
 		position:absolute;
 		top:50%;
 		left:50%;
