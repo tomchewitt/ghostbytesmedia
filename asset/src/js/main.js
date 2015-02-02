@@ -15,8 +15,8 @@ $(document).ready(function(){
 	});
 
 	var pageHeight = $(window).height();
-	var headerHeight = $('.header').height();
+	// var headerHeight = $('.header').height();
 	var footerHeight = $('.footer').height();
-	var projectsHeight = pageHeight - (headerHeight + footerHeight);
+	var projectsHeight = pageHeight - footerHeight;
 	$('.projects').css('height',projectsHeight);
 });

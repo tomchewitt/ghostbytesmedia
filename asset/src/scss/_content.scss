@@ -2,11 +2,12 @@
 // VARIABLES
 //###############################################
 
-$headerheight: 150px;
+$headerheight: 300px;
 $darkblue: #0C2B38;
 $midblue: #133B4E;
 $lightblue: #5E8E95;
 $lighestblue: #6CC1D7;
+$superlightblue: #A8DAE7;
 
 
 
@@ -21,9 +22,19 @@ html,body{
 
 h2 {
 	font-family: 'Titillium Web', sans-serif;
-	font-weight: 200; 
-	font-size: 68px;
+	font-weight: 400; 
+	font-size: 74px;
 	line-height: 64px;
+	text-transform: uppercase;
+}
+
+span {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 400; 
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
 }
 
 
@@ -32,7 +43,7 @@ h2 {
 //###############################################
 
 .header{
-	position:fixed;
+	position:absolute;
 	left:0;
 	top:0;
 	width:100%;
@@ -40,8 +51,10 @@ h2 {
 	z-index:10;
 	.logo-type{
 		position:absolute;
-		left:0;
-		top:$headerheight;
+		left:50%;
+		// top:$headerheight;
+		top:0;
+		transform: translate(-100%, 0);
 		height:$headerheight;
 		width:$headerheight;
 		background-color:$midblue;
@@ -54,10 +67,15 @@ h2 {
 		}
 	}
 	.logo{
-		float:left;
+		// float:left;
 		height:$headerheight;
 		width:$headerheight;
-		background-color:$lightblue;
+		background-color:$lighestblue;
+		position: absolute;
+		top:0;
+		left: 50%;
+		z-index: 10;
+		// transform: translate(50%, 0);
 		img{
 			$logowidth:70%;
 			width:$logowidth;
@@ -66,63 +84,17 @@ h2 {
 			margin-top:(100-$logowidth)/2;
 		}
 	}
-	.social{
-		float:right;
-		margin-top:50px;
-		height:50px;
-	}
-	.social li{
-		display:inline-block;
-		float:right;
-		height:50px;
-		width:50px;
-		position:relative;
-		margin-right:30px;
-		svg{
-			fill:$lightblue;
-			cursor:pointer;
-		}
-	}
-	.email{
-		svg{
-			width:80%;
-			height:80%;
-			position:absolute;
-			left:50%;
-			top:50%;
-			transform:translate(-50%,-50%);
-		}
-	}
-	.linkedin{
-		svg{
-			width:70%;
-			height:70%;
-			position:absolute;
-			left:50%;
-			top:50%;
-			transform:translate(-50%,-50%);
-		}
-	}
-	.skype{
-		svg{
-			width:80%;
-			height:80%;
-			position:absolute;
-			left:50%;
-			top:50%;
-			transform:translate(-50%,-50%);
-		}
-	}
+
 }
 
-header{
-	width:100%;
-	height:100%;
-	position:absolute;
-	right:0;
-	top:0;
-	background-color:$darkblue;
-}
+// header{
+// 	width:100%;
+// 	height:100%;
+// 	position:absolute;
+// 	right:0;
+// 	top:0;
+// 	background-color:$darkblue;
+// }
 
 
 //###############################################
@@ -135,36 +107,39 @@ header{
 	overflow:hidden;
 	position:relative;
 	background: 
-		linear-gradient( to bottom right, rgba($lighestblue, 0.5), rgba($lightblue, 0.9) ),
+		linear-gradient( to bottom right, rgba($lightblue, 0.6) 0, rgba($darkblue, 0.8) 80% ),
 		repeating-linear-gradient( 45deg, transparent, transparent 10px, $lighestblue 10px, $lightblue 20px ),
 		linear-gradient( to bottom, $lighestblue, $lightblue );
 	h2{
 		margin:0 auto;
-		margin-top:350px;
+		margin-top:370px;
 		max-width: 60%;
+		color: white;
+		// margin-right: 30px;
+		text-align: center;
 	}
 	.pointer{
-		width:$headerheight;
-		height:$headerheight;
+		width:200px;
+		height:200px;
 		position:absolute;
 		left:50%;
 		transform:translate(-50%,0);
-		bottom:-100px;
+		bottom:-120px;
 		z-index:4;
 		&::before{
-			width:$headerheight;
-			height:$headerheight;
+			width:200px;
+			height:200px;
 			position:absolute;
 			top:0;
 			left:0;
 			content:"";
 			transform:rotate(45deg);
-			background-color:red;
+			background-color:$midblue;
 			transition:all 0.3s ease;
 		}
 		.arrow{
-			width:$headerheight;
-			height:$headerheight;
+			width:200px;
+			height:200px;
 			position:relative;
 			z-index:5;
 			&::after{
@@ -174,12 +149,12 @@ header{
 				content:"";
 				display:block;
 				position:absolute;
-				top:15px;
+				top:20px;
 				left:50%;
 				transform:translate(-100%,0);
 				transform:rotate(-45deg);
 				transform-origin:bottom center;
-				background-color:black;
+				background-color:$lighestblue;
 				transition:all 0.3s ease;
 			}
 			&::before{
@@ -189,28 +164,28 @@ header{
 				content:"";
 				display:block;
 				position:absolute;
-				top:15px;
+				top:20px;
 				left:50%;
 				transform:rotate(45deg);
 				transform-origin:bottom center;
-				background-color:black;
+				background-color:$lighestblue;
 				transition:all 0.3s ease;
 			}
 			.featured{
-				color:black;
+				color:$lighestblue;
 				font-size:0.7em;
 				position:absolute;
-				top:20px;
-				left:10px;
+				top:24px;
+				left:14px;
 				opacity:0;
 				transition:all 0.3s ease;
 			}
 			.projects{
-				color:black;
+				color:$lighestblue;
 				font-size:0.7em;
 				position:absolute;
-				top:20px;
-				right:10px;
+				top:24px;
+				right:14px;
 				opacity:0;
 				transition:all 0.3s ease;
 			}
@@ -284,5 +259,52 @@ header{
 	line-height:$headerheight;
 	p{
 		margin-left:13%;
+	}
+	.social{
+		float:right;
+		margin-top:50px;
+		height:50px;
+	}
+	.social li{
+		display:inline-block;
+		float:right;
+		height:50px;
+		width:50px;
+		position:relative;
+		margin-right:30px;
+		svg{
+			fill:$lighestblue;
+			cursor:pointer;
+		}
+	}
+	.email{
+		svg{
+			width:80%;
+			height:80%;
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+		}
+	}
+	.linkedin{
+		svg{
+			width:70%;
+			height:70%;
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+		}
+	}
+	.skype{
+		svg{
+			width:80%;
+			height:80%;
+			position:absolute;
+			left:50%;
+			top:50%;
+			transform:translate(-50%,-50%);
+		}
 	}
 }
