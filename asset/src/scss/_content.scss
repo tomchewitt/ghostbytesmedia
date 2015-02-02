@@ -301,7 +301,9 @@ header{
 	height:$headerheight;
 	background-color:$darkblue;
 	line-height:$headerheight;
-	p{
-		margin-left:13%;
-	}
+	text-align:center;
+	color:$lightblue;
+	// p{
+	// 	margin-left:13%;
+	// }
 }
