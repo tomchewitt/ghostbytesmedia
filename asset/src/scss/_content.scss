@@ -301,8 +301,9 @@ p {
 .footer{
 	height:100px;
 	background-color:$darkblue;
-	line-height:100px;
-	p{
+	// line-height:100px;
+	p{	
+		margin-top:45px;
 		width: 75%;
 		float: left;
 		box-sizing: border-box;
@@ -321,7 +322,6 @@ p {
 		width:50px;
 		position:relative;
 		margin-right:30px;
-
 		svg{
 			fill:$lighestblue;
 			cursor:pointer;
